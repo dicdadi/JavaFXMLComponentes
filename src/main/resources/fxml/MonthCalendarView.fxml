@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -27,56 +28,84 @@
       <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="30.0" />
    </columnConstraints>
    <children>
-      <Label fx:id="mesLabel" text="Mes" GridPane.columnSpan="7" />
-      <Label text="L" GridPane.rowIndex="1" />
-      <Label text="M" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="X" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Label text="J" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Label text="V" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Label text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      <Label text="D" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-      <Label fx:id="day1" text="X" GridPane.rowIndex="2" />
-      <Label fx:id="day2" text="X" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Label fx:id="day3" text="X" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Label fx:id="day4" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Label fx:id="day5" text="X" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      <Label fx:id="day6" text="X" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      <Label fx:id="day7" text="X" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-      <Label fx:id="day8" text="X" GridPane.rowIndex="3" />
-      <Label fx:id="day9" text="X" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label fx:id="day10" text="X" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <Label fx:id="day11" text="X" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Label fx:id="day12" text="X" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-      <Label fx:id="day13" text="X" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      <Label fx:id="day14" text="X" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-      <Label fx:id="day15" text="X" GridPane.rowIndex="4" />
-      <Label fx:id="day16" text="X" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <Label fx:id="day17" text="X" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <Label fx:id="day18" text="X" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-      <Label fx:id="day19" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <Label fx:id="day20" text="X" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-      <Label fx:id="day21" text="X" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-      <Label fx:id="day22" text="X" GridPane.rowIndex="5" />
-      <Label fx:id="day23" text="X" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Label fx:id="day24" text="X" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Label fx:id="day25" text="X" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-      <Label fx:id="day26" text="X" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <Label fx:id="day27" text="X" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-      <Label fx:id="day28" text="X" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-      <Label fx:id="day29" text="X" GridPane.rowIndex="6" />
-      <Label fx:id="day30" text="X" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-      <Label fx:id="day31" text="X" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-      <Label fx:id="day32" text="X" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-      <Label fx:id="day33" text="X" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-      <Label fx:id="day34" text="X" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-      <Label fx:id="day35" text="X" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-      <Label fx:id="day36" text="X" GridPane.rowIndex="7" />
-      <Label fx:id="day37" text="X" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-      <Label fx:id="day38" text="X" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-      <Label fx:id="day39" text="X" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-      <Label fx:id="day40" text="X" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-      <Label fx:id="day41" text="X" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-      <Label fx:id="day42" text="X" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+      <Label fx:id="mesLabel" styleClass="nameMonth" text="Mes" GridPane.columnSpan="7" />
+      <Label styleClass="diasSemana" text="L" GridPane.rowIndex="1" />
+      <Label styleClass="diasSemana" text="M" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label styleClass="diasSemana" text="X" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label styleClass="diasSemana" text="J" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label styleClass="diasSemana" text="V" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Label styleClass="diasSemana" text="S" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <Label text="D" GridPane.columnIndex="6" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="diasSemana" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day1" styleClass="day" text="X" GridPane.rowIndex="2" />
+      <Label fx:id="day2" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label fx:id="day3" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label fx:id="day4" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Label fx:id="day5" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Label fx:id="day6" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label fx:id="day7" text="X" GridPane.columnIndex="6" GridPane.rowIndex="2">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day8" styleClass="day" text="X" GridPane.rowIndex="3" />
+      <Label fx:id="day9" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="day10" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label fx:id="day11" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Label fx:id="day12" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Label fx:id="day13" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Label fx:id="day14" text="X" GridPane.columnIndex="6" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day15" styleClass="day" text="X" GridPane.rowIndex="4" />
+      <Label fx:id="day16" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label fx:id="day17" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label fx:id="day18" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Label fx:id="day19" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Label fx:id="day20" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Label fx:id="day21" text="X" GridPane.columnIndex="6" GridPane.rowIndex="4">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day22" styleClass="day" text="X" GridPane.rowIndex="5" />
+      <Label fx:id="day23" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label fx:id="day24" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label fx:id="day25" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Label fx:id="day26" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Label fx:id="day27" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Label fx:id="day28" text="X" GridPane.columnIndex="6" GridPane.rowIndex="5">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day29" styleClass="day" text="X" GridPane.rowIndex="6" />
+      <Label fx:id="day30" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label fx:id="day31" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Label fx:id="day32" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Label fx:id="day33" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Label fx:id="day34" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Label fx:id="day35" text="X" GridPane.columnIndex="6" GridPane.rowIndex="6">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
+      <Label fx:id="day36" styleClass="day" text="X" GridPane.rowIndex="7" />
+      <Label fx:id="day37" styleClass="day" text="X" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label fx:id="day38" styleClass="day" text="X" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Label fx:id="day39" styleClass="day" text="X" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Label fx:id="day40" styleClass="day" text="X" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Label fx:id="day41" styleClass="day" text="X" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Label fx:id="day42" text="X" GridPane.columnIndex="6" GridPane.rowIndex="7">
+         <styleClass>
+            <String fx:value="day" />
+            <String fx:value="domingo" />
+         </styleClass></Label>
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
