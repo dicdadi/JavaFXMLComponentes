@@ -197,12 +197,12 @@ public class MonthCalendar extends GridPane implements Initializable {
 		}
 	//Para mostrar el día actual
 		Label lb = new Label();
-		lb = (Label) getChildren().get(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 9);
+		lb = (Label) getChildren().get(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 12);
 		lb.getStyleClass().clear();
 		int actualMonth = LocalDate.now().getMonthValue();
 		if (LocalDate.now().getYear() == year.get() && actualMonth-1 == month.get()) {
 			lb = new Label();
-			lb = (Label) getChildren().get(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 9);
+			lb = (Label) getChildren().get(Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 12);
 			lb.getStyleClass().clear();
 			lb.getStyleClass().add("today");
 		}
