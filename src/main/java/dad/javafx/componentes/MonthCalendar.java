@@ -159,6 +159,7 @@ public class MonthCalendar extends GridPane implements Initializable {
 	public MonthCalendar() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MonthCalendarView.fxml"));
 		loader.setController(this);
+		loader.setRoot(this);
 		loader.load();
 	}
 
